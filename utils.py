@@ -17,4 +17,4 @@ def predict_image(image_file):
     x = preprocess(img)
     pred = model.predict(x)[0][0]
     label = "cane" if pred>0.5 else "gatto"
-    return {f'label{label}, condifence:{float(pred):.4f}'}
+    return {"label:":label, "confidance:": round(float(pred), 2)}

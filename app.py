@@ -3,6 +3,7 @@ from utils import predict_image
 
 app = Flask(__name__)
 
+
 @app.route("/predict", methods=["POST"])
 def predict():
     if "image" not in request.files:
